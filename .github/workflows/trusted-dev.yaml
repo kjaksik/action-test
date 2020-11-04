@@ -2,7 +2,7 @@
 name: Is trusted dev?
 
 on:
-  pull_request:
+  pull_request_target:
 
 jobs:
   is-trusted-dev:
