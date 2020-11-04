@@ -26,7 +26,7 @@ jobs:
         TOKEN: ${{ steps.generate_token.outputs.token }}
       run: |
 
-        curl -H "Authorization: token ${{ env.TOKEN}}" https://api.github.com/repos/flying-seals/action-test/collaborators/${{ github.event.pull_request.user.login }}
+        curl -H "Authorization: token ${{ env.TOKEN}}" -s -o /dev/null -w "%{http_code}" https://api.github.com/repos/flying-seals/action-test/collaborators/${{ github.event.pull_request.user.login }}
         
 
     #- name: Send ok-to-test event
