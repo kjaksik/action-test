@@ -37,6 +37,8 @@ jobs:
       env:
         SUPER_SECRET: ${{ secrets.TEST }} 
       run: echo "$SUPER_SECRET"
+    - name: Run test.sh
+      run: ./test.sh
   
     - run: |
         echo "Integration tests... success! ;-)"
