@@ -36,8 +36,7 @@ jobs:
     - name: Run a multi-line script
       env:
         SUPER_SECRET: ${{ secrets.TEST }} 
-      run: echo "$SUPER_SECRET"
-    
+      run: echo "$SUPER_SECRET"    
     - name: RUN test sh
       run: ./test.sh
 
