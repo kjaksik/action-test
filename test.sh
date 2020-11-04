@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-echo "TEST"
+echo "TEST asdsa sad sa dsa d"
