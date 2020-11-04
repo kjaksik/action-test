@@ -39,3 +39,4 @@ jobs:
         token: ${{ env.TOKEN }} # GitHub App installation access token
         event-type: ok-to-test
         client-payload: '{"sha": "${{ github.event.pull_request.head.sha }}"}'
+        repository: flying-seals/action-test
