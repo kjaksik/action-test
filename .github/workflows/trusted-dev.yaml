@@ -25,12 +25,9 @@ jobs:
       env:
         TOKEN: ${{ steps.generate_token.outputs.token }}
       run: |
-        RESPONSE=$(curl -H "Authorization: token ${{ env.TOKEN}}" https://api.github.com/orgs/flying-seals/teams/dev/memberships/${{ github.event.pull_request.user.login }})
-        if [["$RESPONSE | jq .state" == "Active"]]; then
-          echo "JEST"
-        else
-          echo "BNIE JHEST"
-        fi
+
+        curl -H "Authorization: token ${{ env.TOKEN}}" https://api.github.com//repos/flying-seals/action-test/collaborators/${{ github.event.pull_request.user.login }}
+        
 
     #- name: Send ok-to-test event
     #  uses: peter-evans/repository-dispatch@v1
